@@ -5,18 +5,12 @@ void main() => runApp(new MyApp());
 class MyApp extends StatelessWidget  {
   @override
   Widget build(BuildContext context) {
-
     return new MaterialApp(
       title: '测试Flutter',
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: new Text('开发者'),
-        ),
-        body: new Center(
-//          child: new Text('Hello World'),
-           child: new RandomWords(),
-        ),
+      theme: new ThemeData(
+        primaryColor: Colors.white,
       ),
+      home:  new RandomWords()
     );
   }
 }
@@ -28,22 +22,6 @@ class RandomWords extends StatefulWidget {
   createState() => new RandomWordsState();
 
   }
-
-  /*
-  随机生成一个字符串
-class RandomWordsState extends State<RandomWords>{
-  @override
-  Widget build(BuildContext context) {
-    final wordPair = new WordPair.random();
-    return new Text(wordPair.asPascalCase);
-    // TODO: implement build
-    throw UnimplementedError();
-  }
-}
-*/
-
-
-
 
 
 
@@ -78,15 +56,64 @@ class RandomWordsState extends State<RandomWords> {
         alreadySaved ? Icons.favorite : Icons.favorite_border,
         color: alreadySaved ? Colors.red : null,
       ),
+      onTap: () {
+        setState(() {
+          if(alreadySaved){
+            _saved.remove(pair);
+          } else {
+            _saved.add(pair);
+          }
+        });
+
+      },
     );
   }
+
+
+  void _pushSaved() {
+    Navigator.of(context).push(
+      new MaterialPageRoute(
+        builder: (context) {
+          final tiles = _saved.map(
+                (pair) {
+              return new ListTile(
+                title: new Text(
+                  pair.asPascalCase,
+                  style: _biggerFont,
+                ),
+              );
+            },
+          );
+          final divided = ListTile
+              .divideTiles(
+            context: context,
+            tiles: tiles,
+          )
+              .toList();
+          
+          return new Scaffold(
+            appBar: new AppBar(
+              title: new Text("第二页"),
+            ),
+             body: new ListView(children: divided),
+          );
+        },
+      ),
+    );
+  }
+
+
+  
 
   @override
   Widget build(BuildContext context) {
     return new Scaffold(
-//      appBar: new AppBar(
-//        title: new Text('就是玩一下'),
-//      ),
+      appBar: new AppBar(
+        title: new Text('我的第一个Flutter项目'),
+        actions: <Widget>[
+          new IconButton(icon: new Icon(Icons.list), onPressed: _pushSaved),
+        ],
+      ),
       body: _buildSuggestions(),
     );
   }
