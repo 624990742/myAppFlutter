@@ -1,116 +1,20 @@
 import 'package:flutter/material.dart';
-import 'package:english_words/english_words.dart';
-
-
-void main() => runApp(new MyApp());
-
-
-
+import 'package:my_app/index/app_page_index.dart';
+void main() =>runApp(new MyApp());
 class MyApp extends StatelessWidget {
-  @override
- Widget build(BuildContext context){
 
-    return  MaterialApp(
-      title: '测试Row与Clomu的区别',
-      home: Scaffold(
-           appBar: new AppBar(
-             title: new Text('测试的啊'),
-           ),
-        body: new Center(
-          child: new Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-             children: [
-               new Expanded(
-                 flex: 3,
-                 child: new Image.asset('images/fengjing1.jpg'),
-               ),
-
-               new Expanded(
-                 flex: 5,
-                 child: new Image.asset('images/headerBg.png'),
-               ),
-
-               new Expanded(
-                 flex: 3,
-                 child: new Image.asset('images/fengjing2.jpeg'),
-               ),
-
-             ],
-          ),
-
-        ),
-
-      ),
-
-    );
-
-}
-
-}
-
-
-
-
-class _MyHomePageState extends State <MyHomePage> {
-  @override
   Widget build(BuildContext context) {
-    //...
-
-    var ratings = new Container(
-      padding: new EdgeInsets.all(20.0),
-      child: new Row(
-        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-        children: [
-          new Row(
-            mainAxisSize: MainAxisSize.min,
-            children: [
-              new Icon(Icons.star, color: Colors.black),
-              new Icon(Icons.star, color: Colors.black),
-              new Icon(Icons.star, color: Colors.black),
-              new Icon(Icons.star, color: Colors.black),
-              new Icon(Icons.star, color: Colors.black),
-            ],
-          ),
-          new Text(
-            '170 Reviews',
-            style: new TextStyle(
-              color: Colors.black,
-              fontWeight: FontWeight.w800,
-              fontFamily: 'Roboto',
-              letterSpacing: 0.5,
-              fontSize: 20.0,
-            ),
-          ),
-        ],
-      ),
+    return new MaterialApp(
+      title: '首页',
+      home:  PageIndex(),
     );
-    //...
   }
+
 }
 
 
 
 
-//    return  MaterialApp(
-//      title: '测试第一个demo',
-//      home: Scaffold(
-//        appBar: new AppBar(
-//          title: new Text("首页"),
-//        ),
-//          body: new ListView(children: [
-//            new  Image.asset(
-//              'images/headerBg.png',
-//              width: 600.0,
-//              height: 240.0,
-//              fit: BoxFit.cover,
-//            ),
-//            titleSection,
-//            buttonSection,
-//            textSection,
-//          ],
-//        ),
-//      ),
-//    );
 
 
 
@@ -120,7 +24,14 @@ class _MyHomePageState extends State <MyHomePage> {
 
 
 
-/********* 第一个实战demo ***********/
+
+//import 'dart:math';
+//import 'package:flutter/cupertino.dart';
+//import 'package:flutter/material.dart';
+//import 'package:english_words/english_words.dart';
+//import 'dart:convert';
+//import 'package:http/http.dart' as http;
+//
 //void main() => runApp(new MyApp());
 //class MyApp extends StatelessWidget  {
 //
@@ -130,7 +41,7 @@ class _MyHomePageState extends State <MyHomePage> {
 //    Column  buildButtonColum(IconData icon, String label){
 //      Color color = Theme.of(context).primaryColor;
 //
-//       return new Column(
+//       return  new Column(
 //         mainAxisSize: MainAxisSize.min,
 //         mainAxisAlignment: MainAxisAlignment.center,
 //         children: [
@@ -156,10 +67,35 @@ class _MyHomePageState extends State <MyHomePage> {
 //      child: new Row(
 //        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
 //        children: [
-//          buildButtonColum(Icons.call, 'CALL'),
-//          buildButtonColum(Icons.near_me, 'ROUTE'),
-//          buildButtonColum(Icons.share, 'SHARE'),
-//          buildButtonColum(Icons.pan_tool, 'HAND')
+//          InkWell(
+//            child: buildButtonColum(Icons.call, 'CALL'),
+//            onTap:(){
+//              print('CALL');
+//              },
+//          ),
+//          GestureDetector(
+//           child: buildButtonColum(Icons.near_me, 'ROUTE'),
+//            onTap: (){
+//              print('ROUTE');
+//            },
+//          ),
+//
+//
+//          RaisedButton(
+//            child: buildButtonColum(Icons.near_me, 'SHARE'),
+//            onPressed: (){
+//              print('SHARE');
+//            },
+//          ),
+//
+//
+//          InkWell(
+//            child: buildButtonColum(Icons.pan_tool, 'HAND'),
+//            onTap:(){
+//              print('HAND');
+//            },
+//          ),
+//
 //        ],
 //      ),
 //    );
@@ -239,7 +175,7 @@ class _MyHomePageState extends State <MyHomePage> {
 //     }
 //}
 //
-//
+
 
 
 
