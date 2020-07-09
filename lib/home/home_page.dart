@@ -98,7 +98,23 @@ Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese Alps. Situate
       child: new Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          InkWell(
+//          InkWell(
+//            child: buildButtonColum(Icons.call, 'CALL'),
+//            onTap:(){
+//              print('CALL');
+//            },
+//          ),
+
+
+//          RaisedButton(
+//            child: buildButtonColum(Icons.near_me, 'SHARE'),
+//            onPressed: (){
+//              print('SHARE');
+//            },
+//          ),
+
+
+          GestureDetector(
             child: buildButtonColum(Icons.call, 'CALL'),
             onTap:(){
               print('CALL');
@@ -112,15 +128,14 @@ Lake Oeschinen lies at the foot of the Blüemlisalp in the Bernese Alps. Situate
           ),
 
 
-          RaisedButton(
+          GestureDetector(
             child: buildButtonColum(Icons.near_me, 'SHARE'),
-            onPressed: (){
+            onTap: (){
               print('SHARE');
             },
           ),
 
-
-          InkWell(
+          GestureDetector(
             child: buildButtonColum(Icons.pan_tool, 'HAND'),
             onTap:(){
               print('HAND');
