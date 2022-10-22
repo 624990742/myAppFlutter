@@ -27,10 +27,10 @@ class _PageIndexState extends State <PageIndex> with TickerProviderStateMixin {
    void initState(){
      super.initState();
      _tabbarIconViews = <TabbarIocnView>[
-       new TabbarIocnView(icon: new Icon(Icons.assessment), itemTitle: new Text("首页"),vsync: this),
-       new TabbarIocnView(icon: new Icon(Icons.contact_phone), itemTitle: new Text("读书"), vsync: this),
-       new TabbarIocnView(icon: new Icon(Icons.contacts), itemTitle:  new Text("发现"), vsync: this),
-       new TabbarIocnView(icon: new Icon(Icons.face), itemTitle: new Text("我"), vsync: this),
+       new TabbarIocnView(icon: new Icon(Icons.assessment), itemTitle: "首页",vsync: this),
+       new TabbarIocnView(icon: new Icon(Icons.contact_phone), itemTitle: "读书", vsync: this),
+       new TabbarIocnView(icon: new Icon(Icons.contacts), itemTitle: "发现", vsync: this),
+       new TabbarIocnView(icon: new Icon(Icons.face), itemTitle: "我", vsync: this),
      ];
 
      //给每一个按钮区域上加监听
