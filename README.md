@@ -1,2 +1,2 @@
 # myAppFlutter
-添加了Flutter项目的基础配置
+###一个对Flutter技术探索与研究的自学项目。 
