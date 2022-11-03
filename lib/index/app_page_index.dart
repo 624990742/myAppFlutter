@@ -28,7 +28,7 @@ class _PageIndexState extends State <PageIndex> with TickerProviderStateMixin {
      super.initState();
      _tabbarIconViews = <TabbarIocnView>[
        new TabbarIocnView(icon: new Icon(Icons.assessment), itemTitle: "首页",vsync: this),
-       new TabbarIocnView(icon: new Icon(Icons.contact_phone), itemTitle: "读书", vsync: this),
+       new TabbarIocnView(icon: new Icon(Icons.contact_phone), itemTitle: "学单词", vsync: this),
        new TabbarIocnView(icon: new Icon(Icons.contacts), itemTitle: "发现", vsync: this),
        new TabbarIocnView(icon: new Icon(Icons.face), itemTitle: "我", vsync: this),
      ];

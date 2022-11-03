@@ -135,6 +135,7 @@ Lake  lies at the foot of the  in the Bernese Alps. Situated 1,578 meters above 
     return new MaterialApp(
       home: new Scaffold(
         appBar: new AppBar(
+          centerTitle: true,
           title: new Text("首页"),
         ),
         body: new ListView(
