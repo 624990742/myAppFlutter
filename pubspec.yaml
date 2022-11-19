@@ -14,8 +14,10 @@ description: A new Flutter project.
 version: 1.0.0+1
 
 environment:
-  sdk: ">=2.1.0 <3.0.0"
-
+  sdk: ">=2.12.0 <3.0.0"
+  #sdk >=2.12.0表示开启空安全检查
+  #如果想关闭空安全检查，可以将SDK的支持范围调整到2.12.0以下即可，
+  #如：sdk: ">=2.7.0 <3.0.0"
 dependencies:
   flutter:
     sdk: flutter

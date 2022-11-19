@@ -14,9 +14,9 @@ class PageIndex extends StatefulWidget {
 
 class _PageIndexState extends State <PageIndex> with TickerProviderStateMixin {
    int _currentInedx = 0;//当前界面的索引值
-   List<TabbarIocnView>  _tabbarIconViews;//底部工具栏所有的 tabbarItem
-   List<StatefulWidget> _pageList;//item 对应的界面
-   StatefulWidget _currentPage;//当前的显示界面
+   late List<TabbarIocnView>  _tabbarIconViews;//底部工具栏所有的 tabbarItem
+   late List<StatefulWidget> _pageList;//item 对应的界面
+   late StatefulWidget _currentPage;//当前的显示界面
 
    //定义一个空的设置状态值的方法
    void _rebuild(){
