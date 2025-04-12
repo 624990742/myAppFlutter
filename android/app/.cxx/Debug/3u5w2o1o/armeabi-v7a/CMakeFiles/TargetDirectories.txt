@@ -1,0 +1,2 @@
+/Users/jcmac/Desktop/workSpace/myAppFlutter/android/app/.cxx/Debug/3u5w2o1o/armeabi-v7a/CMakeFiles/edit_cache.dir
+/Users/jcmac/Desktop/workSpace/myAppFlutter/android/app/.cxx/Debug/3u5w2o1o/armeabi-v7a/CMakeFiles/rebuild_cache.dir
