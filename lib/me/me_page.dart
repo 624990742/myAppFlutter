@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/alearn_demo/router_demo/router.dart';
 
 class MePage extends StatefulWidget {
   @override
@@ -27,7 +28,9 @@ class _MePageState extends State<MePage> {
                   backgroundColor: Colors.green,
                   child: CircleAvatar(
                     radius: 50,
-                    backgroundImage: NetworkImage("https://s3.o7planning.com/images/boy-128.png"),
+                    //网络头像
+                    //NetworkImage("https://xxxxxxxx"),
+                    backgroundImage: AssetImage("images/headerBg.png"),
                     backgroundColor: Colors.cyan[100],
                   ),
                 ),
@@ -60,7 +63,7 @@ class _MePageState extends State<MePage> {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(8),
                   child: Image.network(
-                    'https://s3.o7planning.com/images/boy-128.png',
+                    "",//这里写头像的网络URL
                     width: 50, // 限制宽度
                     height: 50, // 限制高度
                     fit: BoxFit.cover,
@@ -92,6 +95,7 @@ class _MePageState extends State<MePage> {
           trailing: Icon(Icons.arrow_forward_ios, size: 16),
           onTap: () {
             // 可添加点击跳转逻辑
+            MyRouter.pushNamed(context, '/detail', arguments: 'Hello from Home');
           },
         ),
         Divider(height: 1, thickness: 0.5),

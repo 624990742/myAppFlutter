@@ -1,22 +1,62 @@
 import 'package:flutter/material.dart';
+import 'package:my_app/home/home_page.dart';
 import 'package:my_app/index/app_page_index.dart';
+
+
 void main() =>runApp(new MyApp());
 class MyApp extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return new MaterialApp(
       title: '首页',
-      home:  PageIndex(),
+      home: PageIndex(),
+      // initialRoute: '/',
+      // onGenerateRoute: (settings) {
+      //   if (MyRouter.routeTable.containsKey(settings.name)) {
+      //     return MaterialPageRoute(
+      //       builder: (context) => MyRouter.routeTable[settings.name]!(context),
+      //       settings: settings,
+      //     );
+      //   }
+      //   return null; // 如果未匹配，交给 onUnknownRoute
+      // },
+      // onUnknownRoute: MyRouter.onUnknownRoute, // 使用修复后的 onUnknownRoute
     );
   }
 
 }
 
 
+/**
+    import 'package:my_app/alearn_demo/router_demo/router.dart';
+    import 'package:my_app/alearn_demo/router_demo/home_screen.dart';
+
+    void main() =>runApp(new MyApp());
+    class MyApp extends StatelessWidget {
+
+    Widget build(BuildContext context) {
+    return new MaterialApp(
+    title: '首页',
+    home: HomeScreen(), //PageIndex(),
+    initialRoute: '/',
+    onGenerateRoute: (settings) {
+    if (MyRouter.routeTable.containsKey(settings.name)) {
+    return MaterialPageRoute(
+    builder: (context) => MyRouter.routeTable[settings.name]!(context),
+    settings: settings,
+    );
+    }
+    return null; // 如果未匹配，交给 onUnknownRoute
+    },
+    onUnknownRoute: MyRouter.onUnknownRoute, // 使用修复后的 onUnknownRoute
+    );
+    }
+
+    }
 
 
 
-
+ */
 
 
 

@@ -13,6 +13,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.my_app"
+        manifestPlaceholders = [applicationName: "android.app.Application"]
         minSdk 21
         targetSdk 35
         versionCode 1
@@ -24,6 +25,14 @@ android {
             shrinkResources false
             minifyEnabled false
             proguardFiles getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro"
+            manifestPlaceholders = [applicationName: "android.app.Application"]
+        }
+
+        debug {
+            manifestPlaceholders = [applicationName: "android.app.Application"]
+        }
+        build{
+            manifestPlaceholders = [applicationName: "android.app.Application"]
         }
     }
 
