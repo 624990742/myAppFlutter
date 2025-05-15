@@ -28,6 +28,7 @@ class MyApp extends StatelessWidget {
 
 
 /**
+ 如果是学习测试路由跳转可以把上边的注释了，打开这个代码。
     import 'package:my_app/alearn_demo/router_demo/router.dart';
     import 'package:my_app/alearn_demo/router_demo/home_screen.dart';
 
