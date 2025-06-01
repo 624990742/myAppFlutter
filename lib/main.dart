@@ -1,9 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:my_app/home/home_page.dart';
 import 'package:my_app/index/app_page_index.dart';
+import 'package:provider/provider.dart';
+import 'package:my_app/viewmodel/goods_list_viewmodel.dart';
 
+void main() => runApp(
+  MultiProvider(
+    providers: [
+      ChangeNotifierProvider(create: (_) => GoodsListViewModel()),
+      // 其他Provider可以继续加
+    ],
+    child: MyApp(),
+  ),
+);
 
-void main() =>runApp(new MyApp());
+// void main() =>runApp(new MyApp());
 class MyApp extends StatelessWidget {
 
 
