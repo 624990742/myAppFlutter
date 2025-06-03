@@ -4,6 +4,7 @@
 //import 'dart:convert';
 //import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
+import 'package:my_app/view/component_demo_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -100,6 +101,9 @@ Lake  lies at the foot of the  in the Bernese Alps. Situated 1,578 meters above 
           InkWell(
             child: buildButtonColum(Icons.call, 'CALL'),
             onTap:(){
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ComponentDemoPage())
+              );
               print('CALL');
             },
           ),

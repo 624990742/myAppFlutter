@@ -30,7 +30,7 @@ class _GoodsListPageState extends State<GoodsListPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('淘宝瀑布流商品')),
+      appBar: AppBar(title: Text('瀑布流商品')),
       body: Consumer<GoodsListViewModel>(
         builder: (context, vm, child) {
           return RefreshIndicator(

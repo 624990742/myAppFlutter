@@ -17,7 +17,7 @@ class ShortVideoViewModel extends ChangeNotifier {
       id: '$index',
       videoUrl: 'https://www.example.com/video$index.mp4',
       coverUrl: 'https://picsum.photos/400/700?random=$index',
-      title: '淘宝短视频商品标题$index',
+      title: '短视频商品标题$index',
       userName: '用户$index',
       userAvatar: 'https://i.pravatar.cc/150?img=$index',
       likeCount: 1000 + index * 3,

@@ -29,7 +29,7 @@ class GoodsListViewModel extends ChangeNotifier {
       int globalIndex = (page - 1) * 20 + index;
       return GoodsModel(
         imageUrl: 'https://picsum.photos/200/${250 + random.nextInt(100)}?random=$globalIndex',
-        title: '淘宝热卖商品${globalIndex + 1} 超级好用超值推荐',
+        title: '热卖商品${globalIndex + 1} 超级好用超值推荐',
         price: 9.9 + random.nextInt(100),
         sales: 1000 + random.nextInt(9000),
         shop: '旗舰店${random.nextInt(10) + 1}',

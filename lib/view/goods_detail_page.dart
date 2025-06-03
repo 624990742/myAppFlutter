@@ -32,7 +32,7 @@ class GoodsDetailPage extends StatelessWidget {
                 Divider(height: 32),
                 Text('商品描述', style: TextStyle(fontSize: 16, fontWeight: FontWeight.w600)),
                 SizedBox(height: 8),
-                Text('这是一个仿淘宝的商品详情页，支持图片、标题、价格、销量、店铺等信息展示。你可以根据实际需求扩展更多内容。', style: TextStyle(fontSize: 14, color: Colors.black87)),
+                Text('这是一个仿某宝的商品详情页，支持图片、标题、价格、销量、店铺等信息展示。你可以根据实际需求扩展更多内容。', style: TextStyle(fontSize: 14, color: Colors.black87)),
               ],
             ),
           ),
