@@ -2,12 +2,12 @@ import 'package:english_words/english_words.dart';
 import 'package:flutter/material.dart';
 
 ///界面的主题结构
-class ReadPage extends StatefulWidget{
+class wordsListPage extends StatefulWidget{
   @override
-  State <StatefulWidget>  createState() => new _readPageState();
+  State <StatefulWidget>  createState() => new _wordsListPageState();
 }
 
-class _readPageState extends State <ReadPage> {
+class _wordsListPageState extends State <wordsListPage> {
   //单词列表
   final List<WordPair> _suggestions = <WordPair>[];
   //保存状态
@@ -37,7 +37,7 @@ class _readPageState extends State <ReadPage> {
    * 自定义列表
    */
   Widget _buildListView() {
-   return ListView.builder(
+    return ListView.builder(
       padding: const EdgeInsets.all(16.0),
       itemBuilder: /*1*/ (context, i) {
         if (i.isOdd) return const Divider(); /*2*/

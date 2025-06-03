@@ -4,8 +4,8 @@ import 'dart:math';
 
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-import '../view/goods_list_page.dart';
-import '../viewmodel/goods_list_viewmodel.dart';
+import 'goods_list_page.dart';
+import '../viewModel/goods_list_viewModel.dart';
 
 class FinePage extends StatefulWidget{
   @override
@@ -14,10 +14,16 @@ class FinePage extends StatefulWidget{
 
 
 class  _finePageState extends State <FinePage> with SingleTickerProviderStateMixin{
+  // @override
+  // Widget build(BuildContext context) {
+  //   return MaterialApp(
+  //     home: GoodsListPage(),
+  //   );
+  // }
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      home: GoodsListPage(),
+    return Scaffold(
+      body: GoodsListPage(),
     );
   }
 }

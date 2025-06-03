@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_staggered_grid_view/flutter_staggered_grid_view.dart';
 import 'package:provider/provider.dart';
-import '../viewmodel/goods_list_viewmodel.dart';
+import '../viewModel/goods_list_viewModel.dart';
 import '../model/goods_model.dart';
 import '../view/goods_detail_page.dart';
 

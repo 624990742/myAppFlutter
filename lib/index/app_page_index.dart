@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
 import 'package:my_app/tabbar/navigation_tabbar.dart';
-import 'package:my_app/home/home_page.dart';
-import 'package:my_app/read/read_page.dart';
-import 'package:my_app/fine/fine_page.dart';
-import 'package:my_app/me/me_page.dart';
+import 'package:my_app/view/home_page.dart';
+import 'package:my_app/view/read_page.dart';
+import 'package:my_app/view/fine_page.dart';
+import 'package:my_app/view/me_page.dart';
 
 
 class PageIndex extends StatefulWidget {
@@ -28,8 +28,8 @@ class _PageIndexState extends State <PageIndex> with TickerProviderStateMixin {
      super.initState();
      _tabbarIconViews = <TabbarIocnView>[
        new TabbarIocnView(icon: new Icon(Icons.assessment), itemTitle: "首页",vsync: this),
-       new TabbarIocnView(icon: new Icon(Icons.contact_phone), itemTitle: "学单词", vsync: this),
-       new TabbarIocnView(icon: new Icon(Icons.contacts), itemTitle: "发现", vsync: this),
+       new TabbarIocnView(icon: new Icon(Icons.contact_phone), itemTitle: "短视频", vsync: this),
+       new TabbarIocnView(icon: new Icon(Icons.contacts), itemTitle: "商品", vsync: this),
        new TabbarIocnView(icon: new Icon(Icons.face), itemTitle: "我", vsync: this),
      ];
 
@@ -72,17 +72,22 @@ class _PageIndexState extends State <PageIndex> with TickerProviderStateMixin {
    );
 
 
-    return new MaterialApp(
-      home: new Scaffold(
-        body: new Center(
-           child: _currentPage,//当前选中的界面索引值
-        ),
-        bottomNavigationBar: bottomNavigationBar,
-      ),
-    theme: new ThemeData(
-      primarySwatch: Colors.blue,//设置主题颜色
-    ),
-    );
+    // return new MaterialApp(
+    //   home: new Scaffold(
+    //     body: new Center(
+    //        child: _currentPage,//当前选中的界面索引值
+    //     ),
+    //     bottomNavigationBar: bottomNavigationBar,
+    //   ),
+    // theme: new ThemeData(
+    //   primarySwatch: Colors.blue,//设置主题颜色
+    // ),
+    // );
+   return Scaffold(
+     body: _currentPage,
+     bottomNavigationBar: bottomNavigationBar,
+   );
+
   }
 
 }

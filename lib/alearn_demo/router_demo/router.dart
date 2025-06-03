@@ -5,7 +5,7 @@ import 'package:my_app/alearn_demo/router_demo/home_screen.dart';
 import 'package:my_app/alearn_demo/router_demo/detail_screen.dart';
 import 'package:my_app/alearn_demo/router_demo/settings_screen.dart';
 import 'package:my_app/alearn_demo/router_demo/error_screen.dart';
-import 'package:my_app/home/home_page.dart';
+import 'package:my_app/view/home_page.dart';
 
  class MyRouter {
   // 路由表：定义所有页面的路由路径与对应的构建器
