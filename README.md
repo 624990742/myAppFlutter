@@ -6,5 +6,15 @@
 - 首页
 - 短视频
 - 商品列表瀑布流样式
-- 我的
+- 个人信息
 - 商品详情页
+
+#### 部分项目截图 
+  ![首页](https://github.com/624990742/myAppFlutter/blob/master/screenshots/1.png)
+  ![短视频](https://github.com/624990742/myAppFlutter/blob/master/screenshots/2.png)
+  ![商品列表](https://github.com/624990742/myAppFlutter/blob/master/screenshots/3.png)
+  ![个人信息](https://github.com/624990742/myAppFlutter/blob/master/screenshots/4.png)
+  ![商品详情页](https://github.com/624990742/myAppFlutter/blob/master/screenshots/5.png)
+  
+
+
