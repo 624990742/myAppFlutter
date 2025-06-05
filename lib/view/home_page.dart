@@ -4,7 +4,8 @@
 //import 'dart:convert';
 //import 'package:http/http.dart' as http;
 import 'package:flutter/material.dart';
-import 'package:my_app/view/component_demo_page.dart';
+import 'package:my_app/alearn_demo/buttonAndRichText_demo/component_demo_page.dart';
+import 'package:my_app/view/demo_list_page.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -102,7 +103,7 @@ Lake  lies at the foot of the  in the Bernese Alps. Situated 1,578 meters above 
             child: buildButtonColum(Icons.call, 'CALL'),
             onTap:(){
               Navigator.push(context,
-                  MaterialPageRoute(builder: (context) => ComponentDemoPage())
+                  MaterialPageRoute(builder: (context) => DemoListPage())
               );
               print('CALL');
             },

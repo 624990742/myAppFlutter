@@ -2,11 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/gestures.dart';
 
 class ComponentDemoPage extends StatefulWidget {
+  final String title;
+  const ComponentDemoPage({super.key, required this.title});
+
   @override
   State<StatefulWidget> createState() => _ComponentDemoPageState();
 }
 
 class _ComponentDemoPageState extends State<ComponentDemoPage> {
+
   String _message = "你还没有点击按钮";
   TextStyle blackStyle = TextStyle(fontWeight: FontWeight.normal, fontSize: 20, color: Colors.black); // 黑色样式
   TextStyle redStyle = TextStyle(fontWeight: FontWeight.bold, fontSize: 20, color: Colors.red); // 红色样式
@@ -49,7 +53,8 @@ class _ComponentDemoPageState extends State<ComponentDemoPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("富文本 & 按钮示例")),
+      // appBar: AppBar(title: Text("富文本 & 按钮示例")),
+      appBar: AppBar(title: Text(widget.title)),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
         child: SingleChildScrollView( // 避免超出
